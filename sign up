@@ -2,76 +2,75 @@
 import 'package:flutter/material.dart';
 
 void main() {
-runApp(const MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-const MyApp({super.key});
+  const MyApp({super.key});
 
-@override
-Widget build(BuildContext context) {
-return MaterialApp(
-title: 'Signup App',
-theme: ThemeData(
-primarySwatch: Colors.blue,
-),
-home: const SignupPage(),
-);
-}
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Signup App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const SignupPage(),
+    );
+  }
 }
 
 class SignupPage extends StatefulWidget {
-const SignupPage({super.key});
+  const SignupPage({super.key});
 
-@override
-_SignupPageState createState() => _SignupPageState();
+  @override
+  _SignupPageState createState() => _SignupPageState();
 }
 
 class _SignupPageState extends State<SignupPage> {
-final _formKey = GlobalKey<FormState>();
-String _username = '';
-String _password = '';
+  final _formKey = GlobalKey<FormState>();
+  String _username = '';
+  String _password = '';
 
-void _submitForm() {
-if (_formKey.currentState!.validate()) {
-_formKey.currentState!.save();
-ScaffoldMessenger.of(context).showSnackBar(
-SnackBar(content: Text('Signup successful! Welcome, $_username.')),
-);
-}
-}
+  void _submitForm() {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Signup successful! Welcome, $_username.')),
+      );
+    }
+  }
 
-@override
-Widget build(BuildContext context) {
-return Scaffold(
-appBar: AppBar(title: const Text('Signup Page')),
-body: Padding(
-padding: const EdgeInsets.all(16.0),
-child: Form(
-key: _formKey,
-child: Column(
-children: [
-TextFormField(
-decoration: const InputDecoration(labelText: 'Username'),
-onSaved: (value) => _username = value!,
-validator: (value) => value == null || value.isEmpty ? 'Please enter a username' : null,
-),
-TextFormField(
-decoration: const InputDecoration(labelText: 'Password'),
-obscureText: true,
-onSaved: (value) => _password = value!,
-validator: (value) => value == null || value.length < 6 ? 'Password must be at least 6 characters' : null,
-),
-const SizedBox(height: 20),
-ElevatedButton(
-onPressed: _submitForm,
-child: const Text('Sign Up'),
-),
-],
-),
-),
-),
-);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Signup Page')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: const InputDecoration(labelText: 'Username'),
+                onSaved: (value) => _username = value!,
+                validator: (value) => value == null || value.isEmpty ? 'Please enter a username' : null,
+              ),
+              TextFormField(
+                decoration: const InputDecoration(labelText: 'Password'),
+                obscureText: true,
+                onSaved: (value) => _password = value!,
+                validator: (value) => value == null || value.length < 6 ? 'Password must be at least 6 characters' : null,
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: _submitForm,
+                child: const Text('Sign Up'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
-}
-```
