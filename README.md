@@ -23,8 +23,8 @@ A Flutter application for convenient food ordering with user authentication powe
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/xinhaofanfan-app.git
-   cd xinhaofanfan-app
+   git clone https://github.com/yourusername/Grabfood-group-ordering.git
+   cd Grabfood-group-ordering
 2. Install dependencies:
    ```bash
    flutter pub get
