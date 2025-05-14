@@ -37,6 +37,6 @@ Create a .env file with your Supabase credentials:
    ```bash
    flutter run
 
-### Licences
+## Licences
 Distributed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
