@@ -13,12 +13,6 @@ A Flutter application for convenient food ordering with user authentication powe
 - 📊 Supabase backend integration
 - 🎨 Material Design with green theme
 
-## Screens
-
-| Welcome Screen | Sign Up Screen | Login Screen |
-|---------------|---------------|-------------|
-| ![Welcome](https://via.placeholder.com/300x600/FFFFFF/808080?text=Welcome) | ![SignUp](https://via.placeholder.com/300x600/FFFFFF/808080?text=Sign+Up) | ![Login](https://via.placeholder.com/300x600/FFFFFF/808080?text=Login) |
-
 ## Getting Started
 
 ### Prerequisites
@@ -42,4 +36,7 @@ Create a .env file with your Supabase credentials:
 4. Run the app:
    ```bash
    flutter run
+
+### Licences
+Distributed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
