@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  ...orders.map(buildOrderCard).toList(),
+                  ...orders.map(buildOrderCard),
                 ],
               ),
       ),
